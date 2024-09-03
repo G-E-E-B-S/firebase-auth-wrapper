@@ -1,0 +1,20 @@
+{
+  "name": "firebase-auth",
+  "version": "1.0.0",
+  "description": "Firebase Auth package",
+  "main": "main.js",
+  "package_version": 2,
+  "runtime-resource": {
+    "path": "scripts",
+    "name": "scripts"
+  },
+  "contributions": {
+    "asset-db": {
+      "mount": {
+        "path": "./scripts"
+      }
+    }
+  },
+  "main-menu": {},
+  "dependencies": {}
+}

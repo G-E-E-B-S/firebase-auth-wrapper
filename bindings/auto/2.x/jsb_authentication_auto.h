@@ -1,0 +1,88 @@
+// clang-format off
+#pragma once
+
+#include <type_traits>
+#include "cocos/bindings/jswrapper/SeApi.h"
+#include "cocos/bindings/manual/jsb_conversions.h"
+#include "controller/controller.h"
+#include "PersistentAppData.h"
+#include "../../authentication/js-listener/AuthLoginListener.h"
+
+bool register_all_authentication(se::Object *obj);                   // NOLINT
+
+JSB_REGISTER_OBJECT_TYPE(authentication::UserInfo);
+JSB_REGISTER_OBJECT_TYPE(authentication::AuthenticationController);
+JSB_REGISTER_OBJECT_TYPE(authentication::PersistentAppData);
+JSB_REGISTER_OBJECT_TYPE(AuthLoginListener);
+
+
+extern se::Object *__jsb_authentication_UserInfo_proto;   // NOLINT
+extern se::Class *__jsb_authentication_UserInfo_class;    // NOLINT
+
+bool js_register_authentication_UserInfo(se::Object *obj); // NOLINT
+
+SE_DECLARE_FUNC(js_authentication_UserInfo_getUserID);
+SE_DECLARE_FUNC(js_authentication_UserInfo_setUserID);
+
+extern se::Object *__jsb_authentication_AuthenticationController_proto;   // NOLINT
+extern se::Class *__jsb_authentication_AuthenticationController_class;    // NOLINT
+
+bool js_register_authentication_AuthenticationController(se::Object *obj); // NOLINT
+
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_OnGGFirebaseTokenReceived);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_SignInAnonymously);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_SignInApple);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_SignInFacebook);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_SignInGoogle);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_SignInOnLinkFail);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_canLogOut);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_canManuallySignin);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_canSendEmail);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_fetchToken);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getFacebookAccessToken);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getFacebookProfile);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getFacebookUserId);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getGoogleUserId);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getToken);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getUserDisplayName);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getUserID);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getUserInfo);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getUserPhotoUrl);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isAppleSignInSupported);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isAutoSignIn);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isGuestEnabled);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isLoggedInAnonymous);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isLoggedInApple);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isLoggedInFB);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isLoggedInFBGaming);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isLoggedInGoogle);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_isReady);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_logOutApple);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_logOutFB);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_logOutGoogle);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_setPlayLogin);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_signOut);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_tryInit);
+SE_DECLARE_FUNC(js_authentication_AuthenticationController_getInstance);
+
+extern se::Object *__jsb_authentication_PersistentAppData_proto;   // NOLINT
+extern se::Class *__jsb_authentication_PersistentAppData_class;    // NOLINT
+
+bool js_register_authentication_PersistentAppData(se::Object *obj); // NOLINT
+
+SE_DECLARE_FUNC(js_authentication_PersistentAppData_getData);
+SE_DECLARE_FUNC(js_authentication_PersistentAppData_saveData);
+SE_DECLARE_FUNC(js_authentication_PersistentAppData_getInstance);
+
+extern se::Object *__jsb_AuthLoginListener_proto;   // NOLINT
+extern se::Class *__jsb_AuthLoginListener_class;    // NOLINT
+
+bool js_register_AuthLoginListener(se::Object *obj); // NOLINT
+
+SE_DECLARE_FUNC(js_authentication_AuthLoginListener_OnCancel);
+SE_DECLARE_FUNC(js_authentication_AuthLoginListener_OnFailure);
+SE_DECLARE_FUNC(js_authentication_AuthLoginListener_OnFbGamingLogin);
+SE_DECLARE_FUNC(js_authentication_AuthLoginListener_OnLinkAccountFail);
+SE_DECLARE_FUNC(js_authentication_AuthLoginListener_OnSuccess);
+SE_DECLARE_FUNC(js_authentication_AuthLoginListener_getInstance);
+// clang-format on

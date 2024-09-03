@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB8E291A6DE771FC7F41BB95 /* Pods_firebase_auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063E288C10C9A7E9855BC70C /* Pods_firebase_auth.framework */; };
+		D40F0B6F2959B99800F47692 /* KeychainHelperImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F0B6E2959B99800F47692 /* KeychainHelperImplementation.swift */; };
+		D40F0B7C2959C95300F47692 /* SecurityHelperImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F0B7B2959C95300F47692 /* SecurityHelperImplementation.swift */; };
+		D4973EE5295AFBAD0057B552 /* login_delegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973EDF295AFBAD0057B552 /* login_delegate.h */; };
+		D4973EE6295AFBAD0057B552 /* login_delegate_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973EE0295AFBAD0057B552 /* login_delegate_impl.h */; };
+		D4973EE7295AFBAD0057B552 /* controller.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973EE1295AFBAD0057B552 /* controller.h */; };
+		D4973EE8295AFBAD0057B552 /* apple_login_delegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973EE2295AFBAD0057B552 /* apple_login_delegate.h */; };
+		D4973EE9295AFBAD0057B552 /* controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4973EE3295AFBAD0057B552 /* controller.cpp */; };
+		D4973F13295AFF730057B552 /* liblogging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4973F12295AFF730057B552 /* liblogging.a */; };
+		D4973F18295B00780057B552 /* auth_state_listener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4973F16295B00780057B552 /* auth_state_listener.cpp */; };
+		D4973F19295B00780057B552 /* auth_state_listener.h in Headers */ = {isa = PBXBuildFile; fileRef = D4973F17295B00780057B552 /* auth_state_listener.h */; };
+		D4CAE263295A06C7003380A3 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAE261295A022F003380A3 /* AuthenticationServices.framework */; };
+		D4CAE26C295A12F5003380A3 /* firebase_auth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAE26B295A12F5003380A3 /* firebase_auth.xcframework */; };
+		D4CAE26D295A12F5003380A3 /* firebase_auth.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAE26B295A12F5003380A3 /* firebase_auth.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4CAE270295A1310003380A3 /* firebase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAE26F295A1310003380A3 /* firebase.xcframework */; };
+		D4CAE271295A1310003380A3 /* firebase.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAE26F295A1310003380A3 /* firebase.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4FD62AB2959A52C00D6314D /* firebase_auth.h in Headers */ = {isa = PBXBuildFile; fileRef = D4FD62AA2959A52C00D6314D /* firebase_auth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4FD62BB2959A54D00D6314D /* KeychainHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D4FD62B12959A54C00D6314D /* KeychainHelper.h */; };
+		D4FD62BC2959A54D00D6314D /* KeychainHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4FD62B22959A54C00D6314D /* KeychainHelper.mm */; };
+		D4FD62BD2959A54D00D6314D /* IosGlobals.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4FD62B32959A54C00D6314D /* IosGlobals.mm */; };
+		D4FD62BE2959A54D00D6314D /* AppleDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4FD62B42959A54C00D6314D /* AppleDelegate.mm */; };
+		D4FD62BF2959A54D00D6314D /* IosGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = D4FD62B52959A54D00D6314D /* IosGlobals.h */; };
+		D4FD62C02959A54D00D6314D /* FacebookDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4FD62B62959A54D00D6314D /* FacebookDelegate.mm */; };
+		D4FD62C12959A54D00D6314D /* PersistentAppData.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4FD62B72959A54D00D6314D /* PersistentAppData.mm */; };
+		D4FD62C22959A54D00D6314D /* GoogleDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4FD62B82959A54D00D6314D /* GoogleDelegate.mm */; };
+		D4FD62C32959A54D00D6314D /* SecurityHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4FD62B92959A54D00D6314D /* SecurityHelper.mm */; };
+		D4FD62C42959A54D00D6314D /* SecurityHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D4FD62BA2959A54D00D6314D /* SecurityHelper.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4CAE26E295A12F5003380A3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4CAE271295A1310003380A3 /* firebase.xcframework in Embed Frameworks */,
+				D4CAE26D295A12F5003380A3 /* firebase_auth.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		063E288C10C9A7E9855BC70C /* Pods_firebase_auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firebase_auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		215F79947AF835599D066637 /* Pods-firebase-auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase-auth.release.xcconfig"; path = "Target Support Files/Pods-firebase-auth/Pods-firebase-auth.release.xcconfig"; sourceTree = "<group>"; };
+		C4ACF93F6C3D80B6CA809EFB /* Pods-firebase-auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase-auth.debug.xcconfig"; path = "Target Support Files/Pods-firebase-auth/Pods-firebase-auth.debug.xcconfig"; sourceTree = "<group>"; };
+		D40F0B5C2959A90100F47692 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D40F0B5E2959AB0A00F47692 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		D40F0B6E2959B99800F47692 /* KeychainHelperImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelperImplementation.swift; sourceTree = "<group>"; };
+		D40F0B7B2959C95300F47692 /* SecurityHelperImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityHelperImplementation.swift; sourceTree = "<group>"; };
+		D4973EDF295AFBAD0057B552 /* login_delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = login_delegate.h; sourceTree = "<group>"; };
+		D4973EE0295AFBAD0057B552 /* login_delegate_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = login_delegate_impl.h; sourceTree = "<group>"; };
+		D4973EE1295AFBAD0057B552 /* controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = controller.h; sourceTree = "<group>"; };
+		D4973EE2295AFBAD0057B552 /* apple_login_delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apple_login_delegate.h; sourceTree = "<group>"; };
+		D4973EE3295AFBAD0057B552 /* controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = controller.cpp; sourceTree = "<group>"; };
+		D4973F12295AFF730057B552 /* liblogging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblogging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4973F16295B00780057B552 /* auth_state_listener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = auth_state_listener.cpp; sourceTree = "<group>"; };
+		D4973F17295B00780057B552 /* auth_state_listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = auth_state_listener.h; sourceTree = "<group>"; };
+		D4CAE261295A022F003380A3 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/iOSSupport/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		D4CAE26B295A12F5003380A3 /* firebase_auth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = firebase_auth.xcframework; path = "/Users/nehasingh/Code/wordle-frontend/build/jsb-default/frameworks/runtime-src/proj.ios_mac/../../../../../cpp/libs/firebase_sdk/libs/ios/xcframeworks/firebase_auth.xcframework"; sourceTree = "<absolute>"; };
+		D4CAE26F295A1310003380A3 /* firebase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = firebase.xcframework; path = "/Users/nehasingh/Code/wordle-frontend/build/jsb-default/frameworks/runtime-src/proj.ios_mac/../../../../../cpp/libs/firebase_sdk/libs/ios/xcframeworks/firebase.xcframework"; sourceTree = "<absolute>"; };
+		D4FD62A72959A52C00D6314D /* firebase_auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = firebase_auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4FD62AA2959A52C00D6314D /* firebase_auth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = firebase_auth.h; sourceTree = "<group>"; };
+		D4FD62B12959A54C00D6314D /* KeychainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainHelper.h; path = ../../KeychainHelper.h; sourceTree = "<group>"; };
+		D4FD62B22959A54C00D6314D /* KeychainHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = KeychainHelper.mm; path = ../../KeychainHelper.mm; sourceTree = "<group>"; };
+		D4FD62B32959A54C00D6314D /* IosGlobals.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IosGlobals.mm; path = ../../IosGlobals.mm; sourceTree = "<group>"; };
+		D4FD62B42959A54C00D6314D /* AppleDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppleDelegate.mm; path = ../../AppleDelegate.mm; sourceTree = "<group>"; };
+		D4FD62B52959A54D00D6314D /* IosGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IosGlobals.h; path = ../../IosGlobals.h; sourceTree = "<group>"; };
+		D4FD62B62959A54D00D6314D /* FacebookDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FacebookDelegate.mm; path = ../../FacebookDelegate.mm; sourceTree = "<group>"; };
+		D4FD62B72959A54D00D6314D /* PersistentAppData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PersistentAppData.mm; path = ../../PersistentAppData.mm; sourceTree = "<group>"; };
+		D4FD62B82959A54D00D6314D /* GoogleDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GoogleDelegate.mm; path = ../../GoogleDelegate.mm; sourceTree = "<group>"; };
+		D4FD62B92959A54D00D6314D /* SecurityHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SecurityHelper.mm; path = ../../SecurityHelper.mm; sourceTree = "<group>"; };
+		D4FD62BA2959A54D00D6314D /* SecurityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecurityHelper.h; path = ../../SecurityHelper.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4FD62A42959A52C00D6314D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4CAE270295A1310003380A3 /* firebase.xcframework in Frameworks */,
+				D4CAE263295A06C7003380A3 /* AuthenticationServices.framework in Frameworks */,
+				D4CAE26C295A12F5003380A3 /* firebase_auth.xcframework in Frameworks */,
+				D4973F13295AFF730057B552 /* liblogging.a in Frameworks */,
+				BB8E291A6DE771FC7F41BB95 /* Pods_firebase_auth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DD35D91873AD85A1620C42D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4ACF93F6C3D80B6CA809EFB /* Pods-firebase-auth.debug.xcconfig */,
+				215F79947AF835599D066637 /* Pods-firebase-auth.release.xcconfig */,
+			);
+			name = Pods;
+			path = "../../../../build/jsb-default/frameworks/runtime-src/proj.ios_mac/Pods";
+			sourceTree = "<group>";
+		};
+		D4973EDE295AFBAD0057B552 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D4973EDF295AFBAD0057B552 /* login_delegate.h */,
+				D4973EE0295AFBAD0057B552 /* login_delegate_impl.h */,
+				D4973EE1295AFBAD0057B552 /* controller.h */,
+				D4973EE2295AFBAD0057B552 /* apple_login_delegate.h */,
+				D4973EE3295AFBAD0057B552 /* controller.cpp */,
+			);
+			name = controller;
+			path = ../../authentication/controller;
+			sourceTree = "<group>";
+		};
+		D4973F15295B00780057B552 /* firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D4973F16295B00780057B552 /* auth_state_listener.cpp */,
+				D4973F17295B00780057B552 /* auth_state_listener.h */,
+			);
+			name = firebase;
+			path = ../../authentication/firebase;
+			sourceTree = "<group>";
+		};
+		D4FD629D2959A52C00D6314D = {
+			isa = PBXGroup;
+			children = (
+				D4973F15295B00780057B552 /* firebase */,
+				D4973EDE295AFBAD0057B552 /* controller */,
+				D4FD62A92959A52C00D6314D /* firebase-auth */,
+				D4FD62A82959A52C00D6314D /* Products */,
+				4DD35D91873AD85A1620C42D /* Pods */,
+				D9B18984375FEDEC334DC2A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4FD62A82959A52C00D6314D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD62A72959A52C00D6314D /* firebase_auth.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4FD62A92959A52C00D6314D /* firebase-auth */ = {
+			isa = PBXGroup;
+			children = (
+				D4FD62B42959A54C00D6314D /* AppleDelegate.mm */,
+				D4FD62B62959A54D00D6314D /* FacebookDelegate.mm */,
+				D4FD62B82959A54D00D6314D /* GoogleDelegate.mm */,
+				D4FD62B52959A54D00D6314D /* IosGlobals.h */,
+				D4FD62B32959A54C00D6314D /* IosGlobals.mm */,
+				D4FD62B12959A54C00D6314D /* KeychainHelper.h */,
+				D4FD62B22959A54C00D6314D /* KeychainHelper.mm */,
+				D4FD62B72959A54D00D6314D /* PersistentAppData.mm */,
+				D4FD62BA2959A54D00D6314D /* SecurityHelper.h */,
+				D4FD62B92959A54D00D6314D /* SecurityHelper.mm */,
+				D4FD62AA2959A52C00D6314D /* firebase_auth.h */,
+				D40F0B6E2959B99800F47692 /* KeychainHelperImplementation.swift */,
+				D40F0B7B2959C95300F47692 /* SecurityHelperImplementation.swift */,
+			);
+			path = "firebase-auth";
+			sourceTree = "<group>";
+		};
+		D9B18984375FEDEC334DC2A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4973F12295AFF730057B552 /* liblogging.a */,
+				D4CAE26F295A1310003380A3 /* firebase.xcframework */,
+				D4CAE26B295A12F5003380A3 /* firebase_auth.xcframework */,
+				D4CAE261295A022F003380A3 /* AuthenticationServices.framework */,
+				D40F0B5E2959AB0A00F47692 /* CoreFoundation.framework */,
+				D40F0B5C2959A90100F47692 /* Foundation.framework */,
+				063E288C10C9A7E9855BC70C /* Pods_firebase_auth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D4FD62A22959A52C00D6314D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4973EE8295AFBAD0057B552 /* apple_login_delegate.h in Headers */,
+				D4973F19295B00780057B552 /* auth_state_listener.h in Headers */,
+				D4973EE5295AFBAD0057B552 /* login_delegate.h in Headers */,
+				D4FD62BF2959A54D00D6314D /* IosGlobals.h in Headers */,
+				D4FD62BB2959A54D00D6314D /* KeychainHelper.h in Headers */,
+				D4973EE7295AFBAD0057B552 /* controller.h in Headers */,
+				D4973EE6295AFBAD0057B552 /* login_delegate_impl.h in Headers */,
+				D4FD62C42959A54D00D6314D /* SecurityHelper.h in Headers */,
+				D4FD62AB2959A52C00D6314D /* firebase_auth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D4FD62A62959A52C00D6314D /* firebase-auth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4FD62AE2959A52C00D6314D /* Build configuration list for PBXNativeTarget "firebase-auth" */;
+			buildPhases = (
+				378D4A5D9A2F86467A23AC14 /* [CP] Check Pods Manifest.lock */,
+				D4FD62A22959A52C00D6314D /* Headers */,
+				D4FD62A32959A52C00D6314D /* Sources */,
+				D4FD62A42959A52C00D6314D /* Frameworks */,
+				D4FD62A52959A52C00D6314D /* Resources */,
+				D4CAE26E295A12F5003380A3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "firebase-auth";
+			productName = "firebase-auth";
+			productReference = D4FD62A72959A52C00D6314D /* firebase_auth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4FD629E2959A52C00D6314D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D4FD62A62959A52C00D6314D = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+				};
+			};
+			buildConfigurationList = D4FD62A12959A52C00D6314D /* Build configuration list for PBXProject "firebase-auth" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4FD629D2959A52C00D6314D;
+			productRefGroup = D4FD62A82959A52C00D6314D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4FD62A62959A52C00D6314D /* firebase-auth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4FD62A52959A52C00D6314D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		378D4A5D9A2F86467A23AC14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-firebase-auth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4FD62A32959A52C00D6314D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FD62C32959A54D00D6314D /* SecurityHelper.mm in Sources */,
+				D4FD62C02959A54D00D6314D /* FacebookDelegate.mm in Sources */,
+				D4FD62C22959A54D00D6314D /* GoogleDelegate.mm in Sources */,
+				D40F0B7C2959C95300F47692 /* SecurityHelperImplementation.swift in Sources */,
+				D40F0B6F2959B99800F47692 /* KeychainHelperImplementation.swift in Sources */,
+				D4FD62BD2959A54D00D6314D /* IosGlobals.mm in Sources */,
+				D4973F18295B00780057B552 /* auth_state_listener.cpp in Sources */,
+				D4FD62C12959A54D00D6314D /* PersistentAppData.mm in Sources */,
+				D4973EE9295AFBAD0057B552 /* controller.cpp in Sources */,
+				D4FD62BC2959A54D00D6314D /* KeychainHelper.mm in Sources */,
+				D4FD62BE2959A54D00D6314D /* AppleDelegate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D4FD62AC2959A52C00D6314D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4FD62AD2959A52C00D6314D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D4FD62AF2959A52C00D6314D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4ACF93F6C3D80B6CA809EFB /* Pods-firebase-auth.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7P73XJ9SWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wrapper.firebase-auth";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../..",
+					"$(SRCROOT)/../../authentication/**",
+					"$(SRCROOT)/../../../../logging",
+				);
+			};
+			name = Debug;
+		};
+		D4FD62B02959A52C00D6314D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 215F79947AF835599D066637 /* Pods-firebase-auth.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7P73XJ9SWP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wrapper.firebase-auth";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../..",
+					"$(SRCROOT)/../../authentication/**",
+					"$(SRCROOT)/../../../../logging",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4FD62A12959A52C00D6314D /* Build configuration list for PBXProject "firebase-auth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FD62AC2959A52C00D6314D /* Debug */,
+				D4FD62AD2959A52C00D6314D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FD62AE2959A52C00D6314D /* Build configuration list for PBXNativeTarget "firebase-auth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FD62AF2959A52C00D6314D /* Debug */,
+				D4FD62B02959A52C00D6314D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4FD629E2959A52C00D6314D /* Project object */;
+}
